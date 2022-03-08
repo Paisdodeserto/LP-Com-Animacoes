@@ -1,0 +1,400 @@
+/*Importar fontes*/
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&family=Nunito:wght@600;700;800&display=swap');
+
+/*Reset da página*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    /*resetar a cor do site*/
+}
+
+/*Estilo embrulho/wrapper + flexbox*/
+.wrapper {
+    width: 90%;
+    /*largura da página no monitor*/
+    max-width: 1440px;
+    /*tamanho máximo da página*/
+    margin: 0 auto;
+    /*para centralizar a página*/
+}
+
+.flex {
+    display: flex;
+    /*padrão alinhamento à esquerda*/
+    align-items: center;
+    /*centraliza seção 1 e 2*/
+    justify-content: space-between;
+    /*alinha os items com espaço igual entre eles */
+}
+
+.btn {
+    font-family: "Lexend Deca", sans-serif;
+    color: #ea0f78;
+    background-color: #fff;
+    padding: 10px 22px;
+    /*aumentar área de clique*/
+    border-radius: 15px;
+    /*arredondar os cantos do botão*/
+    font-size: 20px;
+    display: block;
+    /*torna o botão um bloco*/
+    width: fit-content;
+    /*a largura do botão vai se adequar ao conteúdo*/
+}
+
+.btn:hover {
+    opacity: 0.8;
+    /*mudar a opacidade do botão quando passamos o mouse em cima*/
+}
+
+/*Estilo seção inicial* (menu+banner)*/
+#secao_inicial {
+    background: linear-gradient(90deg, #9b51bd 0%, #5c43ad 150%);
+    padding: 32px 0px;
+    /*margem cima e baixo da seção inicial*/
+    color: #fff;
+    /*herda a cor branca para toda a seção 1. Exceto o botão que será configurado posteriormente*/
+}
+
+#logo {
+    font-family: "Nunito", sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+#link_secoes {
+    font-family: "Lexend Deca", sans-serif;
+    font-size: 16px;
+}
+
+#links_secoes>a {
+    padding: 10px 15px;
+    /*aumentar a área de clique*/
+}
+
+#links_secoes>a:hover {
+    text-decoration: underline;
+    /*colocar um traço embaixo da Seção1 e 2*/
+}
+
+.btn_menu {
+    font-size: 16px;
+}
+
+/*Estilo Banner - Título*/
+#conteudo_inicial {
+    margin-top: 64px;
+
+}
+
+#conteudo_esq {
+    width: 40%;
+}
+
+#conteudo_esq>h1 {
+    font-family: "Nunito", sans-serif;
+    font-size: 56px;
+    font-weight: 800;
+}
+
+#conteudo_esq>p {
+    font-family: "Lexend Deca", sans-serif;
+    font-size: 16px;
+    margin: 20px 0px 32px;
+}
+
+#imagem1 {
+    max-width: 569px;
+    /*tamanho máximo da imagem*/
+    width: 45%;
+    /*se diminuirmos a imagem, ela irá ocupar apenas 45% do grid (largura)*/
+    min-width: 440px;
+    /*tamanho minimo que a imagem irá diminuir e trava nesse tamanho*/
+}
+
+/*Estilo seção Artigos (título + artigos principais + artigos em destaque*/
+/**/
+#secao_artigos {
+    background-color: #f3f5f7;
+    padding: 64px 0px;
+    /*Distância para a outra seção*/
+}
+
+#secao_artigos>h2, #conteudo_final_textos>h2 {
+    text-align: center;
+    font-family: "Nunito", sans-serif;
+    font-weight: 800;
+    font-size: 30px;
+    color: #313131;
+    margin-bottom: 32px;
+    /*separou do título "Artigos"*/
+}
+
+/*Artigos principais*/
+#artigos_principais {
+    /*background-color: bisque;*/
+    width: 65%;
+}
+
+#artigos_principais>h3, #artigos_destaque>h3 {
+    /*acrescentar outra div para aplicar o mesmo estilo*/
+    font-family: "Nunito", sans-serif;
+    font-weight: 700;
+    font-size: 25px;
+    color: #313131;
+}
+
+#artigos_principais>p {
+    font-family: "Lexend Deca", sans-serif;
+    font-size: 18px;
+    color: #B6B6B6;
+    margin: 10px 0px 32px;
+}
+
+#cards {
+    /*background-color: cadetblue;*/
+    flex-wrap: wrap;
+    /*quebrar a linha com os quadros de artigos*/
+}
+
+.card {
+    width: 48%;
+    /*tamanho do card*/
+    min-width: 310px;
+    /*largura mínima da caixa de card*/
+    background-color: #fff;
+    padding: 20px;
+    margin-bottom: 32px;
+    /*distanciamento entre os cards*/
+    border-radius: 15px;
+}
+
+.cabecalho_card {
+    margin-bottom: 20px;
+}
+
+.cabecalho_card>p {
+    font-family: "Lexend Deca", sans-serif;
+    font-size: 16px;
+    color: #B6B6B6;
+}
+
+.cabecalho_card>i {
+    font-size: 25px;
+    color: #ea0f78;
+}
+
+.conteudo_card>h4, .card_destaque>h4 {
+    font-family: "Nunito", sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    color: #ea0f78;
+    margin-bottom: 5px;
+}
+
+.conteudo_card>p, #conteudo_final_textos>p {
+    font-family: "Lexend Deca", sans-serif;
+    font-size: 18px;
+    color: #B6B6B6;
+    line-height: 25px;
+    /*aumenta a altura entre as linhas*/
+}
+
+/*Estilo Cards laterais*/
+#artigos_destaque {
+    /*background-color: #9b51bd;*/
+    width: 33%;
+}
+
+#cards_destaque {
+    /*background-color: cornflowerblue;*/
+    margin-top: 20px;
+
+}
+
+.card_destaque {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: 16px;
+}
+
+#secao_artigos>div {
+    align-items: flex-start;
+}
+
+/*hover coração preenchido*/
+.cabecalho_card>i:hover::before {
+    /*Quando passar o mouse no coração o sistema altera o before do ícone (preenche o coração)*/
+    font-family: "Font Awesome 6 Free";
+    content: "\f004";
+    /*código do símbolo no site font aweseome*/
+    font-weight: 900;
+    /*preenche o coração*/
+    cursor: pointer;
+    /*cursor vira uma mão*/
+}
+
+/*Estilo Seção final + botão*/
+#secao_final {
+    background-color: #eceef0;
+    padding: 64px 0px;
+}
+
+#conteudo_final_textos {
+    /*background-color: #9b51bd;*/
+    width: 45%;
+}
+
+#conteudo_final_textos>h2 {
+    text-align: left;
+}
+
+.btn_final {
+    background-color: #ea0f78;
+    color: #fff;
+    margin: 32px auto 0px;
+    /*centralizar o botão: cima 32px, direita e esquerda auto, baixo 0px*/
+}
+
+#imagem2 {
+    /*Responsividade (consultar Media Queries) - para controlar o tamanho da imagem*/
+    max-width: 562px;
+    /*tamanho máximo da imagem*/
+    width: 40%;
+    /*se diminuirmos a imagem, ela irá ocupar apenas 45% do grid (largura)*/
+    min-width: 430px;
+    /*tamanho minimo que a imagem irá diminuir e trava nesse tamanho*/
+}
+
+
+/*Estilo final Rodapé*/
+footer {
+    text-align: center;
+    padding: 10px 0px;
+    font-family: "Lexend Deca", sans-serif;
+    color: #ea0f78;
+    background-color: #fff;
+}
+
+/*Começo estilo Responsividade*/
+/*1º width - 1100px*/
+@media screen and (max-width: 1100px) {
+
+    /*tamanho máximo de 0 a 1100*/
+    #conteudo-esq>h1 {
+        font-size: 48px;
+    }
+
+    .btn {
+        font-size: 18px;
+    }
+
+    .card {
+        width: 100%;
+    }
+
+    #conteudo_final_textos>p {
+        font-size: 16px;
+    }
+
+    #conteudo_final_textos>h2 {
+        font-size: 25px;
+    }
+}
+
+/*2º width - 920px*/
+@media screen and (max-width: 920px) {
+    #conteudo-esq>h1 {
+        font-size: 40px;
+    }
+
+    .btn, .btn_menu {
+        font-size: 16px;
+    }
+    #secao_artigos > h2{
+        font-size: 25px;
+    }
+    #artigos_principais>h3, #artigos_destaque>h3 {
+        font-size: 20px;
+    }
+    .conteudo_card>p{
+        font-size: 16px;
+    }
+    .conteudo_card>h4, .card_destaque>h4 {
+        font-size: 18px;
+    }
+}
+/*3º width - 820px*/
+/*Editando o banner*/
+@media screen and (max-width: 820px) {
+    #imagem1{
+        display: none;
+    }
+    #conteudo-esq {
+        width: 65%;
+        text-align: center;
+    }    
+    #conteudo_inicial > div{
+        justify-content: center;
+    }
+    #conteudo_esq > .btn{
+        margin: auto;
+    }
+    #conteudo_esq > h1{
+        font-size: 48px;
+    }
+    /*Seção Artigos*/
+    #secao_artigos >div{
+        flex-direction: column-reverse;
+    }
+    #artigos_principais, #artigos_destaque{
+        width: 100%;
+    }
+    #artigos_destaque{
+        margin-bottom: 64px;
+    }
+    .card{
+        min-width: 100%;
+    }
+    /*Seção final*/
+    #conteudo_final {
+        flex-direction: column;        
+    }
+    #conteudo_final_textos {
+        width: 80%;
+        margin-bottom: 32px;
+        text-align: center;
+    }
+    #conteudo_final_textos>h2 {
+        text-align: inherit;
+        margin-bottom: 16px;
+    }
+    #imagem2{
+        width: 60%;
+        min-width: 200px;
+    }
+}
+
+/*4º width - 600px*/
+@media screen and (max-width: 600px){
+    #links_secoes{
+        display: none;
+    }
+    #conteudo-esq > h1{
+        font-size: 38px;
+        margin-bottom: 32px;
+    }
+    #conteudo_esq > p{
+        display: none;
+    }
+    #conteudo_esq{
+        width: 100%;
+    }
+}
